@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Tags Example</title>
+</head>
+<body>
+
+<!-- Image Tag Example -->
+<img src="https://images.freeimages.com/variants/59tZ1h89y8fuRnBcqUuUjEWo/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"  width="200" height="150" alt="pinkcat">
+
+<!-- Table Tag Example -->
+<table border="1" summary="This table shows fruits and their colors">
+  <caption>Fruit Table</caption>
+  <thead>
+    <tr>
+      <th scope="col">Fruit</th>
+      <th scope="col">Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td headers="fruit">Apple</td>
+      <td headers="color">Red</td>
+    </tr>
+    <tr>
+      <td headers="fruit">Mango</td>
+      <td headers="color">Yellow</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Form Tag Example -->
+<form action="/submit-form" method="post" autocomplete="on" novalidate>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required minlength="3" maxlength="20" pattern="[A-Za-z]+" placeholder="Enter your username" autofocus>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required minlength="6" maxlength="20" placeholder="Enter your password">
+  <br>
+  <input type="submit" value="Submit" onclick="clearAndAlert()">
+</form>
+
+<script>
+function clearAndAlert() {
+    // Get the input elements by their IDs
+    var inputElement = document.getElementById('username');
+    var inputElement1 = document.getElementById('password');
+    
+    // Store the input values in variables
+    var username = inputElement.value;
+    var password = inputElement1.value;
+    
+    // Clear the input boxes
+    inputElement.value = '';
+    inputElement1.value = '';
+    
+    // Show the input values as an alert
+    alert('Hey ' + username + ', your password is ' + password);
+}
+</script>
+
+</body>
+</html>
